@@ -3,6 +3,7 @@
     <link href="styles.css" rel="stylesheet"/>  
     <link href="tokens.css" rel="stylesheet"/>
     <script type ="module" src="./test.mjs"></script>
+    <script type ="module" src="./header.mjs"></script>
 
     <head>
         <title>Miguel's Personal Website</title>
@@ -21,14 +22,22 @@
         <!-- Hello, I'm a comment -->
         <div class="top">
             <h1 id="main_title">Miguel Medina</h1>
-            <p class="navigation"><a href="index.html"> Home</a> <a href="second_page.html"> My Travels </a> </p>
+
+            <p class="navigation"><a href="index.html"> Home</a> 
+                <a href="second_page.html"> My Travels </a> 
+            </p>
+            
+            <label>
+                <input  type="checkbox" autocomplete="off" />
+                Dark mode
+            </label>
+    
+            <button id="menu-button" >Menu</button>
+    
         </div>    
 
         
         
-       
-
-
         <div class="content">
             <div class="pic_boxes">
             <img src="IMG_8274.JPG"  id="image" alt="Picture of Miguel in hiking gear"/>

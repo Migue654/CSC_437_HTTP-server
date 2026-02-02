@@ -3,7 +3,7 @@ body {
   
 
   background-color: var(--page-color);
- border: 3px solid red;
+
 }
 
 dt,h2 {
@@ -11,7 +11,8 @@ dt,h2 {
 }
 .navigation {
   font-size: 1.5rem;
- 
+  display: flex;                   /* links in a row */
+  gap: 1.5rem;
 }
 
 #box{
@@ -23,7 +24,9 @@ dt,h2 {
 }
 .connections {
   display: grid;
-  max-width: 40rem;
+  max-width: 30rem;
+  margin:0.3rem;
+  margin-bottom: 1rem;
   gap: 1em;
   padding: 2em;
   justify-items: center;
@@ -38,7 +41,8 @@ dt,h2 {
   display: flex;
   flex-direction: column;
   max-width:58rem;
-  margin: 1em;
+  
+  margin: 0.3em;
   padding: 1em;
   
 }
@@ -48,8 +52,8 @@ dt,h2 {
 .aboutme {
   display: flex;
   flex-direction: column;
-  min-width: 50em;
-  margin: 1em;
+  max-width: 58em;
+  margin: 0.3em;
   padding: 1em;
 
 }
@@ -69,11 +73,11 @@ dt,h2 {
 }
 .top{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color:var(--navbar-color--);
-  gap: 5rem;
-  max-height: 15rem;
+  
+ 
 }
 .top a,h1{
   color: var(--title-color--);
@@ -108,18 +112,56 @@ dt,h2 {
   justify-content: center;
   align-items: center;
 }
-.information{
+
+@media screen and (max-width: 768px) {
+  .pic_boxes{
+    display: flex;
+    flex-direction: column;
+  }
+  .connections{
+    max-width: 100%;  
+    padding: 0 5rem 0 5rem;
+  }
+  
+}
+.information {
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(5rem, 1fr));
-  justify-items: left;
-
+  grid-template-rows: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  justify-items: stretch;
 }
 
-/* .pic-connections {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+.top button{
+  display: none;
 
 }
-.pic-connections {
-  width: 10rem;
-} */
+@media screen and (max-width: 768px) {
+  
+
+  .top button {
+    display: block;
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 0.5rem;  
+  }
+
+  /* hide navigation by default on mobile */
+  .navigation {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* show navigation when .show is added */
+  .navigation.show {
+    display: flex;
+    
+  }
+
+  #main_title {
+    font-size: 2rem;
+  }
+}
+
+
+
